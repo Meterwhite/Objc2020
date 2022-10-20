@@ -6,8 +6,15 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1848327429019B500083EBF2 /* Objc2020Connect.h in Headers */ = {isa = PBXBuildFile; fileRef = 1848327229019B4F0083EBF2 /* Objc2020Connect.h */; };
+		1848327529019B500083EBF2 /* ObjC2020.h in Headers */ = {isa = PBXBuildFile; fileRef = 1848327329019B4F0083EBF2 /* ObjC2020.h */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		184832632901967D0083EBF2 /* libObjc2020.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjc2020.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1848327229019B4F0083EBF2 /* Objc2020Connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Objc2020Connect.h; sourceTree = "<group>"; };
+		1848327329019B4F0083EBF2 /* ObjC2020.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC2020.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +31,7 @@
 		1848325A2901967D0083EBF2 = {
 			isa = PBXGroup;
 			children = (
+				1848327129019B4F0083EBF2 /* ObjC2020 */,
 				184832642901967D0083EBF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -36,6 +44,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1848327129019B4F0083EBF2 /* ObjC2020 */ = {
+			isa = PBXGroup;
+			children = (
+				1848327229019B4F0083EBF2 /* Objc2020Connect.h */,
+				1848327329019B4F0083EBF2 /* ObjC2020.h */,
+			);
+			path = ObjC2020;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -43,6 +60,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1848327529019B500083EBF2 /* ObjC2020.h in Headers */,
+				1848327429019B500083EBF2 /* Objc2020Connect.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,22 +240,28 @@
 		184832682901967D0083EBF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 			};
 			name = Debug;
 		};
 		184832692901967D0083EBF2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 			};
 			name = Release;
 		};
