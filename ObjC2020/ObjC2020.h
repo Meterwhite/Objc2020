@@ -343,8 +343,8 @@ CORE_CONNECT_IF_EQ(2,CORE_CONNECT_ARGCOUNT(__VA_ARGS__))\
 
 #pragma mark - FOR IN
 /// 🌟
-/// FOR_IN_ITEM(dst) { item }
-/// FOR_IN_ITEM(dst, NSObject) { item }
+/// FOR_IN_ITEM(objs) { item }
+/// FOR_IN_ITEM(objs, NSObject) { item }
 #define FOR_IN_ITEM(...) \
 CORE_CONNECT_IF_EQ(1,CORE_CONNECT_ARGCOUNT(__VA_ARGS__))\
 (for(typeof([__VA_ARGS__ firstObject]) item in __VA_ARGS__)) \
@@ -364,9 +364,9 @@ CORE_CONNECT_IF_EQ(1,CORE_CONNECT_ARGCOUNT(__VA_ARGS__)) \
 #pragma mark - TYPE kind
 /// TYPE_AS(NSObject ,x)
 #define TYPE_AS(T,var)          ((T)(var))
-/// TYPE_AS_IN(obj, NSObject, {
+/// TYPED_IN(obj, NSObject, {
 ///   obj...
-///})
+/// })
 #define TYPED_IN(T,obj,...)   { T *obj##_in = ((id)obj);T *obj = obj##_in; __VA_ARGS__ }
 /// TYPE_VAR(NSObject, x);
 /// x_NSObject
