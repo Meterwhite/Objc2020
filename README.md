@@ -1,6 +1,8 @@
 # Objc2020
 A versatile Objective-C macro language.
 
+`pod 'ObjC2020'`
+
 ```objc
 
 LET_VAR(var, ⁼, ...);
@@ -71,3 +73,4 @@ FOR_INT_I(from, to, var) {
  RET_IF(obj, condition);
 
 ```
+ ![More](https://github.com/Meterwhite/Objc2020/blob/main/ObjC2020/ObjC2020.h)
